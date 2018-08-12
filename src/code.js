@@ -1,8 +1,8 @@
-import { html, render } from 'lit-html/lib/lit-extended';
+import { html, render } from 'lit-html/lib/lit-extended'
 
 let state = {
   name: null,
-  enableLiveRendering: false,
+  enableLiveRendering: false
 }
 
 const handleKeyPress = e => {

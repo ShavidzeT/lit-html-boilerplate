@@ -5,7 +5,8 @@
     "start": "yarn build:dev:watch & yarn serve",
     "build": "wp --mode production",
     "build:dev": "wp --mode development",
-    "build:dev:watch": "yarn build:dev --watch"
+    "build:dev:watch": "yarn build:dev --watch",
+    "lint": "eslint src"
   },
   "name": "lit-html-boilerplate",
   "version": "1.0.0",
@@ -14,6 +15,11 @@
   "author": "Tornike Shavidze <shavidzet@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.1",
     "lit-html": "^0.10.2",
