@@ -1,8 +1,23 @@
 {
   "scripts": {
-    "start": "webpack src/code.js public/bundle.js --watch "
+    "serve": "http-server dist -p 9091 -c --silent -o",
+    "start:once": "yarn build:dev && yarn serve",
+    "start": "yarn build:dev:watch & yarn serve",
+    "build": "wp --mode production",
+    "build:dev": "wp --mode development",
+    "build:dev:watch": "yarn build:dev --watch"
   },
-  "dependencies": {
-    "lit-html": "^0.7.1"
+  "name": "lit-html-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ShavidzeT/lit-html-boilerplate.git",
+  "author": "Tornike Shavidze <shavidzet@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "lit-html": "^0.10.2",
+    "webpack": "^4.16.5",
+    "webpack-command": "^0.4.1"
   }
 }
